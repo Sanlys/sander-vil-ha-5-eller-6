@@ -25,10 +25,10 @@ def bestPath(matrix):
 			elif column == len(matrix[row])-1:
 				matrix[row][column] += matrix[row-1][column-1]
             #Her gjør vi det samme som over, men ser om den er nest ytters. Om den er det, velger vi den laveste av de to vi kan nå.
-            elif column == len(matrix[row])-2:
+			elif column == len(matrix[row])-2:
 				matrix[row][column] += min(matrix[row-1][column-1], matrix[row-1][column])
             #Om vi har muligheten til å velge mellom 3 verdier, velger vi da den laveste.
-            else:
+			else:
 				matrix[row][column] += min(matrix[row-1][column-1], matrix[row-1][column], matrix[row-1][column+1])
 	return min(matrix[-1])
 
