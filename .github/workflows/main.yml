@@ -24,7 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+      
+      - name: Run Oppgave1.py
+        run: python Oppgave1.py
+        
+      - name: Run Oppgave2.py
+        run: python Oppgave2.py
+      
       # Runs a single command using the runners shell
       - name: Compile Oppgave3.cpp
         run: g++ Oppgave3.cpp -o Oppgave3.bin
